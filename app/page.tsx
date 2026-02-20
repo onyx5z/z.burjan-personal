@@ -62,7 +62,7 @@ export default function Home() {
     <main className="min-h-screen">
       <SiteHeader />
 
-      <section className="container mx-auto flex flex-col items-center text-center py-24 sm:py-32">
+      <section className="container mx-auto flex flex-col items-center text-center px-4 py-24 sm:px-6 sm:py-32">
         <p className="text-sm tracking-[0.12em] text-muted-foreground uppercase">
           Accountant &amp; Software Engineer
         </p>
@@ -87,7 +87,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="container mx-auto scroll-mt-28 py-12">
+      <section id="about" className="container mx-auto scroll-mt-28 px-4 py-12 sm:px-6">
         <div className="glass rounded-3xl p-7 sm:p-10">
           <h2 className="text-2xl font-semibold tracking-tight">About</h2>
           <p className="mt-4 max-w-3xl text-muted-foreground">
@@ -103,7 +103,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="container mx-auto scroll-mt-28 py-12">
+      <section id="projects" className="container mx-auto scroll-mt-28 px-4 py-12 sm:px-6">
         <div className="mb-8">
           <h2 className="text-2xl font-semibold tracking-tight">Projects</h2>
           <p className="mt-3 text-muted-foreground">
@@ -136,7 +136,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="skills" className="container mx-auto scroll-mt-28 py-12">
+      <section id="skills" className="container mx-auto scroll-mt-28 px-4 py-12 sm:px-6">
         <div className="mb-6">
           <h2 className="text-2xl font-semibold tracking-tight">Skills</h2>
         </div>
@@ -153,7 +153,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="container mx-auto scroll-mt-28 py-12 pb-24">
+      <section id="contact" className="container mx-auto scroll-mt-28 px-4 py-12 pb-24 sm:px-6">
         <div className="glass rounded-3xl p-7 sm:p-10">
           <h2 className="text-2xl font-semibold tracking-tight">Contact</h2>
           <p className="mt-3 text-muted-foreground">
@@ -178,7 +178,7 @@ export default function Home() {
       </section>
 
       <footer className="border-t border-border">
-        <div className="container mx-auto flex flex-col items-center justify-between gap-4 py-8 sm:flex-row">
+        <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row sm:px-6">
           <p className="text-sm text-muted-foreground">
             &copy; {new Date().getFullYear()} Zoltan Burjan
           </p>

@@ -37,7 +37,9 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <ThemeToggle />
+          <div className="hidden md:block">
+            <ThemeToggle />
+          </div>
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
@@ -62,6 +64,9 @@ export function SiteHeader() {
                   </a>
                 ))}
               </nav>
+              <div className="mt-8 border-t border-border pt-6">
+                <ThemeToggle />
+              </div>
             </SheetContent>
           </Sheet>
         </div>
