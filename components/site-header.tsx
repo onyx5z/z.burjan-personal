@@ -6,7 +6,6 @@ import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
-  SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { ThemeToggle } from "@/components/theme-toggle";
@@ -37,9 +36,7 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <div className="hidden md:block">
-            <ThemeToggle />
-          </div>
+          <ThemeToggle />
 
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild>
@@ -48,24 +45,39 @@ export function SiteHeader() {
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-64">
-              <SheetTitle className="text-sm font-semibold tracking-[0.08em] uppercase">
-                Navigation
-              </SheetTitle>
-              <nav className="mt-8 flex flex-col gap-4">
-                {navItems.map((item) => (
-                  <a
-                    key={item.href}
-                    href={item.href}
+            <SheetContent
+              side="right"
+              showCloseButton={false}
+              className="w-72 border-none bg-transparent p-0 shadow-none"
+            >
+              <div className="glass-strong m-3 mt-3 flex h-[calc(100%-1.5rem)] flex-col rounded-2xl p-6">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-semibold tracking-[0.08em] uppercase">
+                    Menu
+                  </span>
+                  <Button
+                    variant="ghost"
+                    size="icon"
                     onClick={() => setOpen(false)}
-                    className="text-base font-medium text-muted-foreground transition-colors hover:text-foreground"
+                    className="h-8 w-8"
                   >
-                    {item.label}
-                  </a>
-                ))}
-              </nav>
-              <div className="mt-8 border-t border-border pt-6">
-                <ThemeToggle />
+                    <span className="text-lg">&times;</span>
+                    <span className="sr-only">Close</span>
+                  </Button>
+                </div>
+
+                <nav className="mt-8 flex flex-col gap-1">
+                  {navItems.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      onClick={() => setOpen(false)}
+                      className="rounded-xl px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                    >
+                      {item.label}
+                    </a>
+                  ))}
+                </nav>
               </div>
             </SheetContent>
           </Sheet>
